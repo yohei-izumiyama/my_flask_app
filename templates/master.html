@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master</title>
+</head>
+<body>
+    <h1>Master {{room_id}}</h1>
+    <br>
+        現在は第{{current_week}}週です。
+    <br>
+    <form action="/update_week/{{room_id}}" method="get">
+        <input type="submit" value="Next week">
+    </form>
+    <form action="/reset_week/{{room_id}}" method="get">
+        <input type="submit" value="Reset week">
+    </form>
+    <br>
+    <a href="{{ url_for('get_users') }}">Show Users</a>
+</body>
+</html>
